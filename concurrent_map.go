@@ -368,3 +368,7 @@ func (m *ConcurrentMap[K, V]) UnmarshalJSON(b []byte) (err error) {
 	}
 	return nil
 }
+
+func (cms *ConcurrentMapShared[K, V]) Items() map[K]V {
+	return cms.items
+}
